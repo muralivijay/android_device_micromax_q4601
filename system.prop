@@ -70,9 +70,6 @@ persist.sys.scrollingcache=2
 #touch.pressure.calibration=amplitude
 #touch.pressure.scale=0.1
 
-# temporary enables NAV bar (soft keys)
-qemu.hw.mainkeys=1
-
 mediatek.wlan.chip=CONSYS_MT6735
 mediatek.wlan.module.postfix=_consys_mt6735
 ##
