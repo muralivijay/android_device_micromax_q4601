@@ -97,7 +97,6 @@ PRODUCT_PACKAGES += \
     libaudio-resampler \
     libtinyalsa \
     libtinycompress \
-    libtinymix \
     libtinyxml
 
 # WiFi
