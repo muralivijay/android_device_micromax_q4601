@@ -1,7 +1,7 @@
 #!/bin/bash
 
-export DEVICE=namath
-export VENDOR=motorola
+export DEVICE=q4601
+export VENDOR=micromax
 
 if [ $# -eq 0 ]; then
   SRC=adb

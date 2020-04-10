@@ -1,32 +1,25 @@
-#                                       Device Tree for motorola Moto C (3.18.35+)
+#                                       Device Tree for Micromax Selfie 2 Note Q4601 (3.18.35+)
 
-The Moto C (codenamed _"namath"_) is a mid-range smartphone from motorola.
+The Micromax Selfie 2 Note (codenamed _"q4601"_) is a mid-range smartphone from Micromax.
 
 Basic   | Spec Sheet
 -------:|:-------------------------
-CPU     | Quad-core 1.1 GHz Cortex-A53
+CPU     | Quad-core 1.3 GHz Cortex-A53
 Chipset | MediaTek MT6737
 GPU     | Mali-T720
-Memory  | 1GB RAM
+Memory  | 3GB RAM
 Shipped Android Version | 7.0
-Storage | 16GB
+Storage | 32GB
 MicroSD | Up to 32GB
-Battery | Li-Pol 2350mAh battery
-Display | 5.0 inches
-Camera  | Main 5MP / Front 2MP, autofocus, LED flash
+Battery | Li-Pol 3000mAh battery
+Display | 5.5 inches
+Camera  | Main 13MP / Front 8MP, autofocus, LED flash
 
-Copyright 2017 - The LineageOS Project.
-Thanks to olegsvs, danielhk, Zormax, xcore995, SRT.
+Copyright 2017-2020 - The LineageOS Project.
+Thanks to olegsvs, danielhk, Zormax, xcore995, SRT, Mysteryagr.
 
-### Working:
-- [x] Wifi
-- [x] Sound
-- [x] LiveDisplay
-- [x] Ril
-- [x] Codecs
-- [x] Camera, flashlight
-- [x] Radio
-- [x] Bluetooth
-- [x] Sensors
-- [x] Hotspot
-- ...
+### WIP
+
+## Device picture
+
+![Micromax Q4601](https://fdn2.gsmarena.com/vv/pics/micromax/micromax-canvas-selfie2-4.jpg "Micromax Q4601 in black")

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-DEVICE=namath
-VENDOR=motorola
+DEVICE=q4601
+VENDOR=micromax
 
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk

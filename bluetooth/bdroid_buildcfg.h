@@ -1,7 +1,7 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#define BTM_DEF_LOCAL_NAME   "Moto C"
+#define BTM_DEF_LOCAL_NAME   "Micromax Q4601"
 #define KERNEL_MISSING_CLOCK_BOOTTIME_ALARM TRUE
 
 #endif

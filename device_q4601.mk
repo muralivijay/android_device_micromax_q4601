@@ -2,12 +2,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-LOCAL_PATH := device/motorola/namath
+LOCAL_PATH := device/micromax/q4601
 
-$(call inherit-product-if-exists, vendor/motorola/namath/namath-vendor.mk)
+$(call inherit-product-if-exists, vendor/micromax/q4601/q4601-vendor.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/motorola/namath/overlay
-PRODUCT_PACKAGE_OVERLAYS += device/motorola/namath/overlay # enable this to be able overlay a default wallpaper
+DEVICE_PACKAGE_OVERLAYS += device/micromax/q4601/overlay
+PRODUCT_PACKAGE_OVERLAYS += device/micromax/q4601/overlay # enable this to be able overlay a default wallpaper
 
 # Dalvik/HWUI
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)

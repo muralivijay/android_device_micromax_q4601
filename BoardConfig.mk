@@ -1,5 +1,5 @@
 # inherit from the proprietary version
--include vendor/motorola/namath/BoardConfigVendor.mk
+-include vendor/micromax/q4601/BoardConfigVendor.mk
 
 
 # Disable NINJA
@@ -46,7 +46,7 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 
 # Kernel
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
-TARGET_KERNEL_SOURCE := kernel/motorola/namath
+TARGET_KERNEL_SOURCE := kernel/micromax/q4601
 BOARD_KERNEL_BASE := 0x40000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_RAMDISK_OFFSET := 0x04000000
@@ -75,7 +75,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_KMODULES := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := namath,namath_54,Moto_C,Moto C,C
+TARGET_OTA_ASSERT_DEVICE := q4601,q4601_54,Moto_C,Moto C,C
 
 # Disable memcpy opt (for audio libraries)
 TARGET_CPU_MEMCPY_OPT_DISABLE := true
@@ -88,7 +88,7 @@ BOARD_GLOBAL_CFLAGS += -DDISABLE_HW_ID_MATCH_CHECK
 
 
 # Graphics
-BOARD_EGL_CFG := /vendor/motorola/namath/vendor/lib/egl/egl.cfg
+BOARD_EGL_CFG := /vendor/micromax/q4601/vendor/lib/egl/egl.cfg
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 USE_OPENGL_RENDERER := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
@@ -114,7 +114,7 @@ BOARD_USES_MTK_AUDIO := true
 
 # CMHW
 BOARD_USES_CYANOGEN_HARDWARE := true
-BOARD_HARDWARE_CLASS := device/motorola/namath/cmhw
+BOARD_HARDWARE_CLASS := device/micromax/q4601/cmhw
 
 # Fix video autoscaling on old OMX decoders
 TARGET_OMX_LEGACY_RESCALING := true
@@ -123,7 +123,7 @@ TARGET_OMX_LEGACY_RESCALING := true
 BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 
 # RIL
-BOARD_RIL_CLASS := ../../../device/motorola/namath/ril/
+BOARD_RIL_CLASS := ../../../device/micromax/q4601/ril/
 
 # GPS
 BOARD_GPS_LIBRARIES :=true
@@ -160,13 +160,13 @@ BOARD_HAVE_BLUETOOTH := true
 #BOARD_HAVE_BLUETOOTH_MTK := true
 #BOARD_BLUETOOTH_DOES_NOT_USE_RFKILL := true
 BOARD_BLUETOOTH_BDROID_HCILP_INCLUDED := 0
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/motorola/namath/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/micromax/q4601/bluetooth
 
 TARGET_LDPRELOAD += mtk_symbols.so
 TARGET_LDPRELOAD += libmtk_symbols.so
 
 # CWM
-TARGET_RECOVERY_FSTAB := device/motorola/namath/rootdir/recovery.fstab
+TARGET_RECOVERY_FSTAB := device/micromax/q4601/rootdir/recovery.fstab
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 # TWRP stuff
@@ -185,8 +185,8 @@ TW_HAS_DOWNLOAD_MODE := true
 TW_EXCLUDE_SUPERSU := true
 TW_USE_TOOLBOX := true
 
-TARGET_SYSTEM_PROP := device/motorola/namath/system.prop
-TARGET_SPECIFIC_HEADER_PATH := device/motorola/namath/include
+TARGET_SYSTEM_PROP := device/micromax/q4601/system.prop
+TARGET_SPECIFIC_HEADER_PATH := device/micromax/q4601/include
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun/file
 
 ifneq ($(FORCE_32_BIT),yes)
@@ -197,7 +197,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.zygote=zygote64_32
 endif
 
 BOARD_SEPOLICY_DIRS := \
-       device/motorola/namath/sepolicy
+       device/micromax/q4601/sepolicy
 
 # Seccomp filter
-BOARD_SECCOMP_POLICY += device/motorola/namath/seccomp
+BOARD_SECCOMP_POLICY += device/micromax/q4601/seccomp
