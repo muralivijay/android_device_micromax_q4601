@@ -62,19 +62,18 @@ PRODUCT_COPY_FILES += \
 #PRODUCT_COPY_FILES += \
 #    packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
 
-# Media	
+# Media
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:system/etc/media_codecs_google_video_le.xml
 
-# Media	
+# Media
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:/system/etc/audio_policy_volumes.xml \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:/system/etc/default_volume_tables.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:/system/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:/system/etc/usb_audio_policy_configuration.xml
-    
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
@@ -107,7 +106,7 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf \
     lib_driver_cmd_mt66xx
-     
+
 PRODUCT_PACKAGES += \
     librs_jni \
     com.android.future.usb.accessory
@@ -115,8 +114,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     charger \
     libnl_2 \
-    libion 
-    
+    libion
+
 # Charger Mode
 PRODUCT_PACKAGES += \
     charger_res_images
@@ -133,7 +132,8 @@ PRODUCT_PACKAGES += \
 # CM14 mtk symbols
 PRODUCT_PACKAGES += \
     guiext-server \
-    mtk_symbols
+    mtk_symbols \
+    libmtk_symbols
 
 # Force linking shim
 LINKER_FORCED_SHIM_LIBS := /system/lib/libcamera_client.so|mtk_symbols.so
