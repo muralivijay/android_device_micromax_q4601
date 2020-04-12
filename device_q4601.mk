@@ -128,17 +128,16 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap \
-    guiext-server
+    Snap
 
 # CM14 mtk symbols
 PRODUCT_PACKAGES += \
     guiext-server \
-    libmtk_symbols
+    mtk_symbols
 
 # Force linking shim
-LINKER_FORCED_SHIM_LIBS := /system/lib/libcamera_client.so|libmtk_symbols.so
-LINKER_FORCED_SHIM_LIBS := /system/vendor/lib/libcam_platform.so|libmtk_symbols.so
+LINKER_FORCED_SHIM_LIBS := /system/lib/libcamera_client.so|mtk_symbols.so
+LINKER_FORCED_SHIM_LIBS := /system/vendor/lib/libcam_platform.so|mtk_symbols.so
 
 # Disable adb security
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \

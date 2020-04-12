@@ -6,7 +6,7 @@ LOCAL_SRC_FILES := \
 
 
 LOCAL_SHARED_LIBRARIES := libdpframework
-LOCAL_MODULE := libmtk_symbols
+LOCAL_MODULE := mtk_symbols
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)

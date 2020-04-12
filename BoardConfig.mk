@@ -165,7 +165,7 @@ BOARD_BLUETOOTH_BDROID_HCILP_INCLUDED := 0
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/micromax/q4601/bluetooth
 
 # Camera shim
-TARGET_LDPRELOAD += libmtk_symbols.so
+TARGET_LDPRELOAD += mtk_symbols.so
 
 # CWM
 TARGET_RECOVERY_FSTAB := device/micromax/q4601/rootdir/recovery.fstab

@@ -26,9 +26,9 @@ on early-init
 
 on init
     # export LD_SHIM_LIBS
-    export LD_PRELOAD "libmtk_symbols.so"
-    export LD_SHIM_LIBS /system/lib/libcamera_client.so|libmtk_symbols.so
-    export LD_SHIM_LIBS /system/vendor/lib/libcam_platform.so|libmtk_symbols.so
+    export LD_PRELOAD "mtk_symbols.so"
+    export LD_SHIM_LIBS /system/lib/libcamera_client.so|mtk_symbols.so
+    export LD_SHIM_LIBS /system/vendor/lib/libcam_platform.so|mtk_symbols.so
 
     # Support legacy paths
     symlink /sdcard /mnt/sdcard
