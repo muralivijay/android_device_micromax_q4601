@@ -1,4 +1,4 @@
-From 6380aabd56953e4a3805ff1de2e4f9762aedd4c2 Mon Sep 17 00:00:00 2001
+From 8ba6404996afdab95cbb1eb71dc0cf32bf8a8f85 Mon Sep 17 00:00:00 2001
 From: Dmitry Smirnov <divis1969@gmail.com>
 Date: Fri, 4 Nov 2016 22:26:52 +0300
 Subject: [PATCH] Disable usage of get_capture_position
@@ -14,10 +14,10 @@ Change-Id: Ieab4a8bf98011d72d913e8895ec88a05bb19908b
  1 file changed, 14 insertions(+), 14 deletions(-)
 
 diff --git a/services/audioflinger/Threads.cpp b/services/audioflinger/Threads.cpp
-index 4a63232..924bc3e 100644
+index 9049df607..79721385c 100644
 --- a/services/audioflinger/Threads.cpp
 +++ b/services/audioflinger/Threads.cpp
-@@ -6293,20 +6293,20 @@ reacquire_wakelock:
+@@ -6316,20 +6316,20 @@ reacquire_wakelock:
          mTimestamp.mTimeNs[ExtendedTimestamp::LOCATION_SERVER] = systemTime();
  
          // Update server timestamp with kernel stats
@@ -53,5 +53,4 @@ index 4a63232..924bc3e 100644
          // ALOGD("%s", mTimestamp.toString().c_str());
  
 -- 
-1.9.1
-
+2.11.0

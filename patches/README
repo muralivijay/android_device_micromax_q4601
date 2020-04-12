@@ -1,0 +1,5 @@
+This is patch directory
+
+cd WORKING_DIR
+sh device/micromax/q4601/patches/install.sh
+sh device/micromax/q4601/patches/uninstall.sh
