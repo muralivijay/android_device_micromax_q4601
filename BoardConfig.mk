@@ -125,6 +125,7 @@ TARGET_OMX_LEGACY_RESCALING := true
 BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 
 # RIL
+BOARD_PROVIDES_RILD := true
 BOARD_RIL_CLASS := ../../../device/micromax/q4601/ril/
 
 # GPS
