@@ -9,9 +9,9 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 # Inherit device configuration
 $(call inherit-product, device/micromax/q4601/device_q4601.mk)
 
-TARGET_SCREEN_HEIGHT := 854
-TARGET_SCREEN_WIDTH := 480
-DEVICE_RESOLUTION := 480x854
+TARGET_SCREEN_HEIGHT := 1280
+TARGET_SCREEN_WIDTH := 720
+DEVICE_RESOLUTION := 720x1280
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := q4601
