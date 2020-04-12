@@ -113,3 +113,8 @@
 
 #MTK In-House TEE
 /dev/ttyACM0              0660   radio      radio
+
+# TINNO BEGIN
+/dev/goodix_fp              0666   root       root
+/dev/elan_fp                0666   root       root
+# TINNO END.

@@ -426,3 +426,18 @@ vendor/lib/mediadrm/libwvdrmengine.so
 vendor/thh/fp_server_elan
 vendor/thh/fp_server_silead
 vendor/thh/soter.raw
+
+#
+# Fingerprint
+#
+bin/fingerprintd
+bin/fpsvcd_ca_beanpod
+etc/finger_config.xml
+etc/silead/log_cfg.xml
+etc/silead/sysparms/board_for_gsl6163e00/silead_config.xml
+etc/silead/sysparms/board_for_gsl6163e00/silead_param.xml
+etc/silead/sysparms/sl_common_cfg.xml
+lib/hw/fingerprint.elan.default.so
+lib/hw/fingerprint.silead.default.so
+lib/libhardware_detect_ca_qsee.so
+

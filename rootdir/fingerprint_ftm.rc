@@ -1,0 +1,63 @@
+# fingerprint for mtk ftm
+#
+service servicemanager /system/bin/servicemanager
+    class core
+    user system
+    group system readproc
+    critical
+
+# Silead start.
+on init
+     mkdir /mnt/silead/ 0777 shell shell
+     mkdir /mnt/silead/tmp 0777 shell shell
+     mount tmpfs tmpfs /mnt/silead/tmp mode=0777,gid=1000
+
+# Silead
+on post-fs-data
+	chmod 0666 /dev/silead_fp_dev
+	chmod 0755 /system/bin/fpsvcd
+	chmod 0755 /system/bin/fpfslockd
+	chmod 0777 /system/bin/factorytoold
+	chmod 0755 /system/bin/cloudtestsuited
+	chmod 0755 /system/bin/checksilead
+	mkdir /data/silead 0777 shell shell
+	chown system system /sys/silead/fp_wake_lock
+	chown system system /sys/silead/fp_wake_unlock
+
+# Goodix
+service gx_fpd /system/bin/gx_fpd
+    class main
+    user system
+    group system system
+    disabled
+    on property:sys.fp.goodix=1	
+    start gx_fpd
+    on property:sys.fp.goodix=0
+    stop gx_fpd
+
+# fingerprintd
+service fingerprintd /system/bin/fingerprintd
+    class main
+    user system
+    group system system
+    on property:sys.fingerprintd=factory-boot
+    start fingerprintd
+    on property:sys.fingerprintd=0
+    stop fingerprintd
+
+# Silead
+service fpsvcd_mtk /system/bin/fpsvcd_ca_beanpod
+    disabled
+    class main
+    user system
+    group system system
+    on property:sys.fp.silead=1	
+    start fpsvcd_mtk
+    on property:sys.fp.silead=0	
+    stop fpsvcd_mtk
+
+# Chipone
+on init
+   chmod 0666 /dev/chipone_fp
+   chown root root /dev/chipone_fp
+

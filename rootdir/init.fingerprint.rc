@@ -1,0 +1,127 @@
+#
+############################ Action ##############################
+# Chipone
+on init
+   chmod 0666 /dev/chipone_fp
+   chown root root /dev/chipone_fp
+#for TZ log
+on init
+   chmod 0666 /dev/fp_drv
+   chown root root /dev/fp_drv
+
+#on post-fs-data
+#    mkdir /data/chipone_fp
+#    chown system system /data/chipone_fp
+#    chown system system /data/chipone_fp/socket
+#   chmod 0774  /data/chipone_fp
+#    chmod 0774  /data/chipone_fp/socket
+
+
+
+# Silead start.
+on init
+     mkdir /mnt/silead/ 0777 shell shell
+     mkdir /mnt/silead/tmp 0777 shell shell
+     mount tmpfs tmpfs /mnt/silead/tmp mode=0777,gid=1000
+
+# Silead
+on post-fs-data
+    chmod 0666 /dev/silead_fp_dev
+    chmod 0755 /system/bin/fpsvcd
+    chmod 0755 /system/bin/fpfslockd
+    chmod 0777 /system/bin/factorytoold
+    chmod 0755 /system/bin/cloudtestsuited
+    chmod 0755 /system/bin/checksilead
+    mkdir /data/silead 0777 shell shell
+    chown system system /sys/silead/fp_wake_lock
+    chown system system /sys/silead/fp_wake_unlock
+
+# Goodix
+on post-fs-data
+    mkdir /data/system/fingerprint 0770 root system
+    restorecon_recursive /data/system/fingerprint  
+    mkdir /data/system/fingerprint/match 0770 root system
+    restorecon_recursive /data/system/fingerprint/match  
+    mkdir /data/system/fingerprint/unmatch 0770 root system
+    restorecon_recursive /data/system/fingerprint/unmatch  
+    mkdir /data/system/fingerprint/calibration 0770 root system
+    restorecon_recursive /data/system/fingerprint/calibration  
+    mkdir /data/system/fingerprint/register 0770 root system
+    restorecon_recursive /data/system/fingerprint/register  
+    mkdir /data/system/users/0/ 0775 system system
+    mkdir /data/system/users/0/fpdata 0775 system system
+    restorecon /data/system/users/0/fpdata
+
+############################ Services daemon ##############################
+# fingerprintd
+service fingerprintd /system/bin/fingerprintd
+    class late_start
+    user system
+    group system system
+    on property:sys.fingerprintd=factory-boot
+    start fingerprintd
+    on property:sys.fingerprintd=0
+    stop fingerprintd
+
+
+# Goodix
+service gx_fpd /system/bin/gx_fpd
+    class main
+    user system
+    group system system
+    disabled
+    on property:sys.fp.goodix=1	
+    start gx_fpd
+    on property:sys.fp.goodix=0
+    stop gx_fpd
+
+
+# Silead
+service fpsvcd /system/bin/fpsvcd_ca_qsee –uuid 08010000000000000000000000000000
+    disabled
+    class main
+    user system
+    group system system
+    on property:sys.fp.silead=1	
+    start fpsvcd
+    on property:sys.fp.silead=0	
+    stop fpsvcd
+
+service fpsvcd_mtk /system/bin/fpsvcd_ca_beanpod
+    disabled
+    class main
+    user system
+    group system system
+    on property:sys.fp.silead=1	
+    start fpsvcd_mtk
+    on property:sys.fp.silead=0	
+    stop fpsvcd_mtk
+
+on property:sys.fingerprint.data.remove=1
+    rm /data/system/users/0/settings_fingerprint.xml
+    rm /data/system/users/0/fpdata/fp1.bin
+    rm /data/system/users/0/fpdata/fp2.bin
+    rm /data/system/users/0/fpdata/fp3.bin
+    rm /data/system/users/0/fpdata/fp4.bin
+    rm /data/system/users/0/fpdata/fp5.bin
+    rm /data/system/users/10/settings_fingerprint.xml
+    rm /data/system/users/10/fpdata/fp1.bin
+    rm /data/system/users/10/fpdata/fp2.bin
+    rm /data/system/users/10/fpdata/fp3.bin
+    rm /data/system/users/10/fpdata/fp4.bin
+    rm /data/system/users/10/fpdata/fp5.bin
+    rm /data/system/users/11/settings_fingerprint.xml
+    rm /data/system/users/11/fpdata/fp1.bin
+    rm /data/system/users/11/fpdata/fp2.bin
+    rm /data/system/users/11/fpdata/fp3.bin
+    rm /data/system/users/11/fpdata/fp4.bin
+    rm /data/system/users/11/fpdata/fp5.bin
+    rm /data/system/users/12/settings_fingerprint.xml
+    rm /data/system/users/12/fpdata/fp1.bin
+    rm /data/system/users/12/fpdata/fp2.bin
+    rm /data/system/users/12/fpdata/fp3.bin
+    rm /data/system/users/12/fpdata/fp4.bin
+    rm /data/system/users/12/fpdata/fp5.bin
+
+
+

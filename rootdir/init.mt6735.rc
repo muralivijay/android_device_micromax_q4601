@@ -15,6 +15,15 @@ import init.microtrust.rc
 import init.common_svc.rc
 import init.c2k.rc
 
+# TINNO BEGIN	
+# Fingerprint support. mingyi.guo	
+import init.fingerprint.rc	
+# TINNO END
+
+# guomingyi add for fingerprint support {
+import fingerprint_ftm.rc
+#}
+
 # init.modem.rc must be the LAST rc file because vold.post_fs_data_done is set in it
 import init.modem.rc
 # *** DO NOT import the new rc file after this line ***
@@ -329,12 +338,12 @@ on post-fs-data
     chown system system /sys/class/misc/m_baro_misc/baroflush
 
     # Hardwareinfo
-    chmod 0666 /dev/hardwareinfo
-    chown system system /dev/hardwareinfo
+    #chmod 0666 /dev/hardwareinfo
+    #chown system system /dev/hardwareinfo
     
      # tp_emulate_ps
-    chmod 0666 /dev/tp_emulate_ps
-    chown system system /dev/tp_emulate_ps
+    #chmod 0666 /dev/tp_emulate_ps
+    #chown system system /dev/tp_emulate_ps
 
     #Accdet
     chown root radio /sys/devices/platform/Accdet_Driver/driver/accdet_call_state

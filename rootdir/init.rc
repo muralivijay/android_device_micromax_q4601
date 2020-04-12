@@ -13,6 +13,10 @@ import /init.${ro.zygote}.rc
 # Include CM's extra init file
 import /init.cm.rc
 
+# TINNO BEGIN
+# Add for fingerprint support 
+import init.fingerprint.rc
+# TINNO END.
 
 on early-init
     # Set init and its forked children's oom_adj.
@@ -718,3 +722,10 @@ service logcatd /system/bin/logcat -b default -v threadtime -v usec -v printable
     user logd
     group log
 
+on property:persist.tinno.factory=1
+    chmod 0666 /data/nvram/APCFG/APRDEB/BT_Addr
+    chmod 0666 /dev/fm
+
+on property:persist.tinno.factory=0
+    chmod 0660 /data/nvram/APCFG/APRDEB/BT_Addr
+    chmod 0660 /dev/fm
