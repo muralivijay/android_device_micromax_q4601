@@ -134,7 +134,6 @@ PRODUCT_PACKAGES += \
 # CM14 mtk symbols
 PRODUCT_PACKAGES += \
     guiext-server \
-    mtk_symbols \
     libmtk_symbols
 
 # Force linking shim

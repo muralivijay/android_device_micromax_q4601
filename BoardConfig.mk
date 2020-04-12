@@ -164,7 +164,7 @@ BOARD_HAVE_BLUETOOTH := true
 BOARD_BLUETOOTH_BDROID_HCILP_INCLUDED := 0
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/micromax/q4601/bluetooth
 
-TARGET_LDPRELOAD += mtk_symbols.so
+# Camera shim
 TARGET_LDPRELOAD += libmtk_symbols.so
 
 # CWM
