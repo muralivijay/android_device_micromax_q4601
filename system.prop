@@ -159,3 +159,12 @@ persist.log.tag.RfxController=I
 persist.log.tag.RILC-RP=I
 persist.log.tag.RIL-DATA=I
 persist.radio.mtk_dsbp_support=1
+
+# Dex2oat optimisation
+# use 6 cores during bootup dex compilation
+dalvik.vm.boot-dex2oat-threads=4
+# use 3 cores durning normal dex compilation (app installations)
+dalvik.vm.dex2oat-threads=3
+# use 3 cores during boot image dex compilation
+dalvik.vm.image-dex2oat-threads=3
+
