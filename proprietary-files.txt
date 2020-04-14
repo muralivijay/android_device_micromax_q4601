@@ -450,3 +450,11 @@ lib/libcamera_metadata.so
 lib/libcameraservice.so
 lib/libimageeffect.so
 lib/libimageeffectservice.so
+
+# Media
+bin/mediacodec
+bin/mediaserver
+etc/init/mediacodec.rc
+etc/init/mediaserver.rc
+etc/media_profiles.xml
+
