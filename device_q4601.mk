@@ -135,7 +135,6 @@ PRODUCT_PACKAGES += \
 
 # CM14 mtk symbols
 PRODUCT_PACKAGES += \
-    guiext-server \
     mtk_symbols \
     libmtk_symbols
 
@@ -164,7 +163,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.legacyencoder=0
- 
+
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.kernel.android.checkjni=0
