@@ -35,11 +35,6 @@ etc/media_codecs_mediatek_audio.xml
 vendor/etc/cdma_ecc_list.xml:etc/cdma_ecc_list.xml
 etc/media_codecs_mediatek_video.xml
 #etc/audio_param/AudioParamOptions.xml
-## Bluetooth (etc)
-etc/bluetooth/bt_did.conf
-etc/bluetooth/bt_stack.conf
-etc/bluetooth/bt_stack.conf.debug
-etc/bluetooth/bt_stack.conf.sqc
 ## init (etc)
 etc/init/audioserver.rc
 etc/init/bootanim.rc
