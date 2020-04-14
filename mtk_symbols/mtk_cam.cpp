@@ -10,5 +10,20 @@
 extern "C" {
 void _ZN7android16CameraParameters10BEAUTYSHOTE () {
     }
+
+void _ZN7android16CameraParameters21KEY_POST_PROCESS_MODEE () {
+    }
+
+void _ZN7android16CameraParameters8PANORAMAE () {
+    }
+
+void _ZN7android16CameraParameters8WIDESELFE () {
+    }
+
+void _ZN7android16CameraParameters9NIGHTSHOTE () {
+    }
+
+void _ZN7android16CameraParameters8KEY_FLIPE () {
+    }
 }
 
