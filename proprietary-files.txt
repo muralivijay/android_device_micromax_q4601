@@ -441,3 +441,12 @@ lib/hw/fingerprint.elan.default.so
 lib/hw/fingerprint.silead.default.so
 lib/libhardware_detect_ca_qsee.so
 
+# Camera
+bin/cameraserver
+etc/init/cameraserver.rc
+lib/libcamera2ndk.so
+lib/libcamera_client.so
+lib/libcamera_metadata.so
+lib/libcameraservice.so
+lib/libimageeffect.so
+lib/libimageeffectservice.so
