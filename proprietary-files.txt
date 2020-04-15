@@ -453,3 +453,6 @@ etc/init/mediacodec.rc
 etc/init/mediaserver.rc
 etc/media_profiles.xml
 
+# Swap
+bin/mkswap
+bin/swapon
